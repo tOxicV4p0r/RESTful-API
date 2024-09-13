@@ -6,6 +6,6 @@ const { registerValidation, passwordChangeValidation } = require('../../utils/va
 const authRouter = express.Router();
 
 authRouter.post('/register', registerValidation, validationMiddleware, register);
-authRouter.post('/change-password', passwordChangeValidation, validationMiddleware, changePassword);
+authRouter.put('/change-password', passwordChangeValidation, validationMiddleware, changePassword);
 
 module.exports = authRouter;
